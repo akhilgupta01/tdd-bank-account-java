@@ -18,4 +18,12 @@ public class AccountTest {
         account.deposit(20);
         assertThat(account.balance()).isEqualTo(20);
     }
+
+    @Test
+    public void withdrawMoneyFromAccount(){
+        Account account = new Account();
+        account.deposit(50);
+        account.withdraw(20);
+        assertThat(account.balance()).isEqualTo(30);
+    }
 }
